@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mongodb EmployeeDetails Querys</h1>
+
+    <h3>1. Create a database , give it name like ""Human_Resource"". Create a collection inside this named ""employee""</h3>
+    <p>use Human_Resource (create Database), db.employee(create collection)</p>
+
+    <h3>2. Query the collection ""employee"" and list all the documents</h3>
+    <p>Query: db.employee.insertMany([
+        {
+          "firstName": "John",
+          "lastName": "Doe",
+          "salary": "25000",
+          "department": "HR",
+          "lastCompany": "X",
+          "lastSalary": "10000",
+          "overallExp": "2",
+          "contactInfo": "1234567890",
+          "yearGrad": "2016",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Rohan",
+          "lastName": "Jame",
+          "salary": "30000",
+          "department": "Technical",
+          "lastCompany": "Y",
+          "lastSalary": "15000",
+          "overallExp": "1",
+          "contactInfo": "1234567860",
+          "yearGrad": "2015",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Jame",
+          "lastName": "Doe",
+          "salary": "35000",
+          "department": "Accounts",
+          "lastCompany": "Z",
+          "lastSalary": "20000",
+          "overallExp": "1",
+          "contactInfo": "123567890",
+          "yearGrad": "2019",
+          "gradStream": "ECE"
+        },
+        {
+          "firstName": "Sao",
+          "lastName": "Avika",
+          "salary": "30000",
+          "department": "Sales",
+          "lastCompany": "Y",
+          "lastSalary": "15000",
+          "overallExp": "2",
+          "contactInfo": "1234567860",
+          "yearGrad": "2015",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Jame",
+          "lastName": "roh",
+          "salary": "35000",
+          "department": "Accounts",
+          "lastCompany": "Z",
+          "lastSalary": "15000",
+          "overallExp": "2",
+          "contactInfo": "123567890",
+          "yearGrad": "2019",
+          "gradStream": "EEE"
+        },
+        {
+          "firstName": "Rohan",
+          "lastName": "Jame",
+          "salary": "30000",
+          "department": "Technical",
+          "lastCompany": "Y",
+          "lastSalary": "15000",
+          "overallExp": "1",
+          "contactInfo": "1234567860",
+          "yearGrad": "2015",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Jame",
+          "lastName": "Doe",
+          "salary": "35000",
+          "department": "Accounts",
+          "lastCompany": "Z",
+          "lastSalary": "20000",
+          "overallExp": "1",
+          "contactInfo": "123567890",
+          "yearGrad": "2019",
+          "gradStream": "ECE"
+        },
+        {
+          "firstName": "Sao",
+          "lastName": "Avika",
+          "salary": "30000",
+          "department": "Sales",
+          "lastCompany": "Y",
+          "lastSalary": "15000",
+          "overallExp": "2",
+          "contactInfo": "1234567860",
+          "yearGrad": "2015",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Jame",
+          "lastName": "Doe",
+          "salary": "35000",
+          "department": "Accounts",
+          "lastCompany": "Z",
+          "lastSalary": "15000",
+          "overallExp": "2",
+          "contactInfo": "123567890",
+          "yearGrad": "2019",
+          "gradStream": "EEE"
+        },
+        {
+          "firstName": "Rohan",
+          "lastName": "Jame",
+          "salary": "30000",
+          "department": "Technical",
+          "lastCompany": "Y",
+          "lastSalary": "15000",
+          "overallExp": "1",
+          "contactInfo": "1234567860",
+          "yearGrad": "2015",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Jame",
+          "lastName": "Doe",
+          "salary": "35000",
+          "department": "Accounts",
+          "lastCompany": "Z",
+          "lastSalary": "20000",
+          "overallExp": "1",
+          "contactInfo": "123567890",
+          "yearGrad": "2019",
+          "gradStream": "ECE"
+        },
+        {
+          "firstName": "Sao",
+          "lastName": "Avika",
+          "salary": "30000",
+          "department": "Sales",
+          "lastCompany": "Y",
+          "lastSalary": "15000",
+          "overallExp": "2",
+          "contactInfo": "1234567860",
+          "yearGrad": "2015",
+          "gradStream": "CSE"
+        },
+        {
+          "firstName": "Jame",
+          "lastName": "Doe",
+          "salary": "35000",
+          "department": "Accounts",
+          "lastCompany": "Z",
+          "lastSalary": "15000",
+          "overallExp": "2",
+          "contactInfo": "123567890",
+          "yearGrad": "2019",
+          "gradStream": "EEE"
+        }
+      ])
+    
+    <h4>to list details:" db.employee.find()"</h4></p>
+
+    <h3>3. Query the collection ""employee"" and list the employees who are having salary more than 30000</h3>
+    <p>db.employeeDetails.find({'salary':{'$gt':'30000'}})
+
+        [
+        {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae09"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "20000",
+            "overallExp": "1",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "ECE"
+          }
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae0b"
+            },
+            "firstName": "Jame",
+            "lastName": "roh",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "15000",
+            "overallExp": "2",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "EEE"
+          }
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae0d"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "20000",
+            "overallExp": "1",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "ECE"
+          }
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae0f"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "15000",
+            "overallExp": "2",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "EEE"
+          }
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae11"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "20000",
+            "overallExp": "1",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "ECE"
+          }
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae13"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "15000",
+            "overallExp": "2",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "EEE"
+          }
+        ]
+        </p>
+
+    <h3>4. Query the collection ""employee"" and list the employees who are having experience more than 2 years.</h3>
+    <p>No data</p>
+
+    <h3>5. Query the collection ""employee"" and list the employees who are graduated after 2015 and having experience more than 1 year </h3>
+    <p>query: db.employeeDetails.find($and: [{'yearGrad': {'$gt': '2015'}}, {'overallExp': {'$gt':'1'}}])
+
+        <span>[{
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae07"
+            },
+            "firstName": "John",
+            "lastName": "Doe",
+            "salary": "25000",
+            "department": "HR",
+            "lastCompany": "X",
+            "lastSalary": "10000",
+            "overallExp": "2",
+            "contactInfo": "1234567890",
+            "yearGrad": "2016",
+            "gradStream": "CSE"
+          },
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae09"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "20000",
+            "overallExp": "1",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "ECE"
+          },
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae0b"
+            },
+            "firstName": "Jame",
+            "lastName": "roh",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "15000",
+            "overallExp": "2",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "EEE"
+          },
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae0d"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "20000",
+            "overallExp": "1",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "ECE"
+          },
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae0f"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "15000",
+            "overallExp": "2",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "EEE"
+          },
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae11"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "20000",
+            "overallExp": "1",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "ECE"
+          },
+          {
+            "_id": {
+              "$oid": "6419d4b5c7663e6036dcae13"
+            },
+            "firstName": "Jame",
+            "lastName": "Doe",
+            "salary": "35000",
+            "department": "Accounts",
+            "lastCompany": "Z",
+            "lastSalary": "15000",
+            "overallExp": "2",
+            "contactInfo": "123567890",
+            "yearGrad": "2019",
+            "gradStream": "EEE"
+          }
+          ]
+        
+        </span>
+    </p>
+
+    <h3>6. Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.</h3>
+    <p>No Data</p>
+
+    <h3>7. Delete all the documents from ""employee"" where last company is Y"</h3>
+    <p>db.employeeDetails.drop({"lastCompany": "Y"})</p>
+</body>
+</html>
